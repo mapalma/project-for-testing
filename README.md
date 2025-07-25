@@ -2,6 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.19.
 
+## Purpose
+    This project serves as a playground to explore and practice:
+
+    - New features introduced in Angular 18+
+    - Reactive programming with RxJS
+    - Unit testing with Jasmine and Karma
+    - Best practices for accessibility using Reactive Forms
+
+## Technologies Used
+
+- **Angular 18** (with standalone components)
+- **RxJS 7**
+- **Jasmine** & **Karma** for unit testing
+- **SCSS** for styling
+- **Google Fonts**: [Inter](https://fonts.google.com/specimen/Inter)
+- **Font Awesome** for icons
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
