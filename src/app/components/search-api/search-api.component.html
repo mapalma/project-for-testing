@@ -1,0 +1,58 @@
+<h1>Búsqueda de países</h1>
+
+<div class="app-testing-search__form--container">
+        <form [formGroup]="searchForm" class="app-testing-form">
+            <div class="app-testing-form__input--row">
+                <label for="countryName">Nombre:</label>
+                <input id="countryName" formControlName="name" type="text" placeholder="Ej. Spain" 
+                aria-describedby="countryHint" class="app-testing-form__input--search"/>
+                <span class="app-testing-form__input--hint" id="countryHint">Introduce al menos 3 caracteres</span>
+                
+            </div>
+        </form>
+</div>
+
+<div class="app-testing-search__results">
+    @if(countries.length > 0 ){
+         <table cellspacing="0">
+                <tr>
+                    <th>Nombre oficial</th>
+                    <th>Capital</th>
+                    <th>Idiomas</th>
+                    <th class="table__cell--right">Habitantes</th>
+                    <th class="table__cell--center">Bandera</th>
+                    <th class="table__cell--center">Mapa</th>                 
+                </tr>
+    
+        @for (country of countries; track country.cca2) {
+
+                <tr>
+                    <td>{{country.name.common}}</td>
+                    <td>{{country.capital}}</td>
+                    
+                    <td>
+                         @for ( lang of country.languages | keyvalue; track lang.key; let i = $index; let last = $last) {
+                            <span>{{ lang.value }}</span>
+                            @if(!$last){
+                                <span>, </span>
+                            }
+                        }
+        
+                    </td>
+                    <td class="table__cell--right">{{country.population}}</td>
+                    <td class="table__cell--center"><img [src]="country.flags.png" [alt]="country.name.common" width="40px"/></td>
+                    
+                    <td class="table__cell--center"><a [href]="country.maps.googleMaps" target="_blank" rel="noopener">
+                        <i class="fas fa-map-marker-alt"></i> Ver en mapa
+                    </a></td>                
+                </tr>
+            
+        }
+
+        </table>
+    }
+
+    @if(showNoResultsMsg){
+        <p>No se encontraron resultados para la búsqueda</p>
+    }
+</div>

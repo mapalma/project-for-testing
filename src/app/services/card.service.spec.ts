@@ -45,7 +45,7 @@ describe('CardService', () => {
     // Se hace la llamada a obtenerDatos(), lo que dispararía la solicitud HTTP.
     // Se intercepta la solicitud con httpMock.expectOne('api/datos').
     //Luego, se simula que el servidor devuelve ['dato1', 'dato2'] con req.flush(['dato1', 'dato2']).
-    //Finalmente, expect() valida que los datos que recibimos en el subscribe sean los que esperábamos (['dato1', 'dato2']).
+    //Finalmente, expec() valida que los datos que recibimos en el subscribe sean los que esperábamos (['dato1', 'dato2']).
   });
 
   afterEach(() => {

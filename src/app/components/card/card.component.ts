@@ -10,6 +10,7 @@ import { CardService } from '../../services/card.service';
 })
 export class CardComponent {
   datos: any[] = [];
+ 
   constructor(private cardService: CardService){}
 
   ngOnInit() {
@@ -17,4 +18,21 @@ export class CardComponent {
       this.datos = res;
     });
   }
+
+//   transformToNumber(value: any): Number{
+//     return +value
+//   }
+
+//   validateStringNotEmpty(value: String) {
+//   if (value.trim().length === 0) {
+//     throw new Error('Invalid input - must not be empty.');
+//   }
+// }
+
+//   validateNumber(num: any) {
+//     if (isNaN(num)) {
+//       throw new Error('Invalid number input.');
+//     }
+//   }
+
 }

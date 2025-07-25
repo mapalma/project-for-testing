@@ -1,0 +1,40 @@
+header {
+    background-color:  #135fab;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.5rem;
+    box-shadow: 1px 4px 4px #e5e5e5;
+}
+
+p {
+     color: #fff;
+     font-weight: 500;
+}
+
+ul {
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+
+    li {
+        list-style: none;
+        margin-right:1rem;
+
+        a { 
+            text-decoration: none;
+            color: #fff;
+            transition: 0.2s ease-in;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+
+            &.active-link,
+            &:hover {
+                color: #ffbb4c;
+                background-color: #05417e;
+            }     
+        }
+    }
+}

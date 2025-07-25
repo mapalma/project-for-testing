@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+   
+    
+    margin: 0;
+}
+
+body {
+     font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #34414e;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #135fab;
+    margin-bottom: 1rem;
+}
+h1 {
+     font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+     font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+     font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+input {
+    color: #34414e;
+}
+
+table {
+    width: 100%;
+
+    th, td {
+        padding: 0.5rem 0.5rem;
+        
+    }       
+
+    th {
+        background-color: #7a9bbb;
+        color: #fff;
+        text-align: left;
+        border-right: 1px solid #ddd;
+        
+    }
+
+    tr {
+        td {
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            text-align: left;
+            font-size: 0.85rem;
+
+            &:first-child {
+                border-left: 1px solid #ddd;
+            }
+        }
+
+        &:nth-child(odd){
+            td {
+                background-color: #fbfbfb;
+            }
+        }
+    }
+}
+
+.table__cell {
+    &--right {
+        text-align: right;
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
